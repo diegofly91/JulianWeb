@@ -1,0 +1,33 @@
+$breakpoint-tablet: 768px;
+
+.Layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+
+    .header {
+        grid-column: 1;
+        grid-row: 1;
+        width: 100%;
+    }
+    
+    .component {
+        grid-column: 2;
+        height: 100%;
+        width: 100%;
+        grid-row: 1;
+        padding:5px;
+    }
+    
+    Footer {
+        grid-column: 1 / 3;
+        grid-row: 3;
+    }
+    // @media (max-width: $breakpoint-tablet) {
+        
+    //     .component {
+    //         grid-column: 1/3;
+    //     }
+    // }
+}

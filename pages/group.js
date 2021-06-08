@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Home() {
+export default function Group() {
   return (
     <div >
-       <p>hola mundo</p>
+       <p>Grupo Legado</p>
     </div>
   )
 }

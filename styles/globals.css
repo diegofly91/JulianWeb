@@ -2,8 +2,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+  font-family: 'Poppins', sans-serif;
 }
 
 a {
@@ -13,4 +14,14 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Guthen Bloots';
+  src: local('Guthen Bloots Regular'), local('Guthen-Bloots-Regular'),
+      url('../public/fonts/GuthenBloots.woff2') format('woff2'),
+      url('../public/fonts/GuthenBloots.woff') format('woff'),
+      url('../public/fonts/GuthenBloots.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
 }

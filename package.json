@@ -2,14 +2,39 @@
   "name": "julianweb",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://diegofly91.github.io/JulianWeb/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "deploy": "rm -rf node_modules/.cache && rimraf out && next build && next export && touch out/.nojekyll && gh-pages -d out -t true",
+    "start": "next start",
+    "format": "prettier --write \"src/pages/**/*.js\" \"src/components/**/*.js\" \"src/config/**/*.js\" \"src/mutations/**/*.js\" \"public/**/*.js\" \"src/querys/**/*.js\" \"src/styles/**/*.js\""
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "classnames": "2.2.6",
+    "clsx": "^1.1.1",
+    "dotenv": "^8.2.0",
+    "gh-pages": "^3.2.0",
+    "import": "0.0.6",
     "next": "10.2.3",
+    "next-compose-plugins": "2.2.0",
+    "nouislider": "14.4.0",
+    "path": "0.12.7",
+    "prop-types": "^15.7.2",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-beautiful-dnd": "^13.1.0",
+    "react-dom": "17.0.2",
+    "react-scripts": "^4.0.3",
+    "react-slick": "^0.25.2",
+    "react-swipeable-views": "0.13.9",
+    "sass": "^1.32.8"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "prettier": "^2.1.2",
+    "typescript": "3.3.3"
   }
 }
