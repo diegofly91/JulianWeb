@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     },
     container: {
         display: 'flex',
+        flexWrap: 'wrap',
         alignItems: 'baseline',
         justifyContent: 'space-around',
         width: '100%',
@@ -60,11 +61,11 @@ const Footer = (props) => {
         [className]: className !== undefined
       });
     return <div className={headerClasses}>
-               <Container className={classes.container}> 
+               <div className={classes.container}> 
                    <ListPagesFooter />
                    <LogoFooter /> 
                    <ListSocialFooter />
-              </Container>
+              </div>
               <p className={classes.text}> © 2021, Julián Córdoba Sánchez | Todos los derechos reservados</p>
               <a className={classes.marca} href='https://diegofly91.github.io/diegolibreros/' target='_blank'>
                   <GitHubIcon className={classes.icon} />

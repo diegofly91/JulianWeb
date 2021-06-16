@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
           color: theme.palette.primary.text,
           fontSize: 11,
           fontWeight: 600,
-          paddingLeft: 20,
+          paddingLeft: 15,
           '&:hover': {
             color: '#FFFFFF'
           }
@@ -25,7 +25,7 @@ const ListPath = () => {
     const classes = useStyles();
     return<div className={classes.containerText}>
                 {pagesPath.map((item, index) => {
-                return <Link key={index} href={item.path} className={classes.text}>
+                return <Link key={index} href={item.path}>
                             <a className={classes.text}>
                                 {item.title}
                             </a>

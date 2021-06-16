@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
             marginBottom: 10
         }
       },
-      text: {
+      textSocial: {
           color: theme.palette.secondary.main,
           fontSize: 12,
           fontWeight: 400,
@@ -32,11 +32,11 @@ const useStyles = makeStyles((theme) => ({
 
 const ListSocialFooter = () => {
     const classes = useStyles();
-    return<div className={classes.containerText}>
+    return<ul className={classes.containerText}>
                 {ListSocial.map((item, index) => {
-                return  <a href={item.path} className={classes.text} key={index}>{item.title}</a>
+                return  <a href={item.path} className={classes.textSocial} key={index}>{item.title}</a>;
                 })}
-          </div>
+          </ul>
 }
 
 export default ListSocialFooter;

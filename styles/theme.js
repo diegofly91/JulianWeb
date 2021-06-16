@@ -19,15 +19,15 @@ const guthen = {
 const theme = createMuiTheme({
     palette: {
         primary: {
-            main: '#19517a',
-            text: '#adc621',
-            icons: '#f6a22d'
+            main: '#345278',
+            text: '#B3C53A',
+            icons: '#E8A13A'
         },
         secondary: {
-            main: '#f6a22d',
+            main: '#E8A13A',
         },
         green: {
-            default: '#adc621',
+            default: '#B3C53A',
         },
     },
     overrides: {
