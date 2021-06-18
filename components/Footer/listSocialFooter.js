@@ -15,7 +15,8 @@ const useStyles = makeStyles((theme) => ({
             flexGrow:1,
             width: '100%',
             marginTop: 10,
-            marginBottom: 10
+            marginBottom: 10,
+            padding: 0
         }
       },
       textSocial: {
