@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'space-around',
         width: '100%',
         padding: 10,
+        margin: 'auto',
         maxWidth: 1200,
         [theme.breakpoints.down('xs')]: {
             flexDirection: 'column',
@@ -31,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     text: {
-        color: 'white',
+        color: theme.palette.primary.icons,
         margin: 'auto',
         width: '100%',
         textAlign:'center',

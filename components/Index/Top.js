@@ -1,6 +1,10 @@
 import React from 'react';
-import { Grid, Typography, Box } from '@material-ui/core';
+import { Grid, Typography, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import ContainerPage  from '@/components/Container';
+import Btn from '@/components/Globals/Btn';
+import Title from '@/components/Globals/Title';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -24,70 +28,46 @@ const useStyles = makeStyles((theme) => ({
       alignItems: 'center',
       position: 'relative'
     },
-    divPaper: {
-        [theme.breakpoints.down('sm')]: {
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center'
-        },
+    text:{
+        marginBottom: 0,
+        paddingLeft: 20,
     },
-    paper: {
-        fontSize: 40,
-        fontWeight: 700,
-        color: theme.palette.primary.main,
-        position: "relative",
-        width: 'auto',
-        "&:before": {
-          position: "absolute",
-          content: '""',
-          bottom: 5,
-          minWidth: '100%',
-          width: 100,
-          height: 20,
-          zIndex: -1,
-          background: theme.palette.primary.text
-        },
-        [theme.breakpoints.down('sm')]: {
-            fontSize: 30,
-            margin: 'auto'
-        },
+    cv:{
+        marginTop: 20,
+        fontWeight: 600
     },
 }));
 
 const Top = () => {
     const classes = useStyles();
-    return <Grid container
-                 direction="row"
-                 justify="center"
-                 alignItems="center"
-                 spacing={2}
-            > 
-                <Grid item xs={12} sm={6} md={6}>
-                    <div className={classes.containerImg}>
-                        <img src="fondo.png" className={classes.backg} />
-                        <img src="julian.png" className={classes.img} />
-                    </div>
+    return <ContainerPage>
+                    <Grid container
+                        direction="row"
+                        justify="center"
+                        alignItems="center"
+                        spacing={2}
+                    > 
+                        <Grid item xs={12} sm={6} md={6}>
+                            <div className={classes.containerImg}>
+                                <img src="fondo.png" className={classes.backg} />
+                                <img src="julian.png" className={classes.img} />
+                            </div>
+                        </Grid>
+                        <Grid item xs={12} sm={6} md={6}>
+                            <Title title={'Hola soy Julián'}/>
+                            <Title title={'Córdoba Sanchez!'}/>
+                            <br />
+                            <Typography className={classes.text}>
+                                Médico cirujano, especialista en urologia y ecografía.
+                            </Typography>
+                            <Typography className={classes.text}>
+                                Méaestrando Gestión Pública y Doctorando Salud Pública.
+                            </Typography>
+                            <Btn href={'/'} title={'MIRA MI CV'}/>
+                            
+                        </Grid>
                 </Grid>
-                <Grid item xs={12} sm={6} md={6}>
-                    <Typography  component="p" className={classes.divPaper}>
-                        <span className={classes.paper}>
-                             Hola soy Julián
-                        </span>
-                    </Typography>    
-                    <Typography  component="p" className={classes.divPaper}>
-                        <span className={classes.paper}>
-                             Córdoba Sanchez!
-                        </span>
-                    </Typography>
-                    <br />
-                    <Typography className={classes.divPaper}>
-                         Médico cirujano, especialista en urologia y ecografía.
-                    </Typography>
-                    <Typography className={classes.divPaper}>
-                         Méaestrando Gestión Pública y Doctorando Salud Pública.
-                    </Typography>
-                </Grid>
-           </Grid>
+           </ContainerPage>
 };
 
 export default Top;

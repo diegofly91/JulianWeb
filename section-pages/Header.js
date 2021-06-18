@@ -23,7 +23,13 @@ const useStyles = makeStyles((theme) => ({
             justifyContent: 'space-between'
         },
     },
-   
+    viewMax:{
+        display: 'flex',
+        flexWrap: 'wrap-reverse',
+        flexGrow:1,
+        justifyContent: 'center', 
+        alignItems: 'center'
+    }
 }));
 
 const Header = (props) => {

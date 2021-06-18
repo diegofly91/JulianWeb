@@ -8,7 +8,10 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,  
         display: 'flex',
         justifyContent: 'flex-start',
-        alignItems: 'center'
+        alignItems: 'center',
+        [theme.breakpoints.down('sm')]: {
+            justifyContent: 'center'
+        },
       },
       text: {
           color: theme.palette.primary.text,
