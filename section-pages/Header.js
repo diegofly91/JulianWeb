@@ -33,6 +33,7 @@ const Header = (props) => {
     const [container,setContainer] = useState();
  
     useEffect(()=>{
+
         if(width && width > 720){
             setContainer(
                 <div className={classes.viewMax}>
