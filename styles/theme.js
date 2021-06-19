@@ -1,5 +1,6 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-
+//font-family: 'Exo', sans-serif;
+//font-family: 'Poppins', sans-serif;
 // add font Guthem Bloots,
 const guthen = {
   fontFamily: 'Guthen Bloots',
@@ -29,6 +30,14 @@ const theme = createMuiTheme({
         green: {
             default: '#B3C53A',
         },
+    },
+    typography: {
+      fontFamily: [
+                    'Poppins',
+                    'Exo',
+                    // '"Helvetica Neue"',
+                    'sans-serif'
+                  ].join(','),
     },
     overrides: {
         MuiCssBaseline: {

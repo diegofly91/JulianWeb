@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from "classnames";
 import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -16,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.primary.main,
         position: "relative",
         width: 'auto',
+        fontFamily: 'Poppins',
         "&:before": {
           position: "absolute",
           content: '""',
@@ -33,10 +35,15 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-const Title = ({title}) => {
+const Title = (props) => {
+    const { title, className } = props;
     const classes = useStyles();
+    const headerClasses = classNames({
+        [classes.paper]: true,
+        [className]: className !== undefined
+      });
     return  <Typography  component="p" className={classes.divPaper}>
-                <span className={classes.paper}>
+                <span className={headerClasses}>
                     {title}
                 </span>
             </Typography>

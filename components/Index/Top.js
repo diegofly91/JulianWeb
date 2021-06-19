@@ -5,7 +5,6 @@ import ContainerPage  from '@/components/Container';
 import Btn from '@/components/Globals/Btn';
 import Title from '@/components/Globals/Title';
 
-
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
@@ -31,6 +30,8 @@ const useStyles = makeStyles((theme) => ({
     text:{
         marginBottom: 0,
         paddingLeft: 20,
+        fontFamily: 'Exo',
+        fontWeight: 600
     },
     cv:{
         marginTop: 20,
@@ -58,7 +59,7 @@ const Top = () => {
                             <Title title={'Córdoba Sanchez!'}/>
                             <br />
                             <Typography className={classes.text}>
-                                Médico cirujano, especialista en urologia y ecografía.
+                                Médico cirujano, especialista en urología y ecografía.
                             </Typography>
                             <Typography className={classes.text}>
                                 Méaestrando Gestión Pública y Doctorando Salud Pública.

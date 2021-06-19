@@ -16,10 +16,8 @@ export default class MyDocument extends Document {
                         sizes="76x76"
                         href="/apple-icon.png"
                     />
-                    <link 
-                        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" 
-                        rel="stylesheet"
-                    />
+                    <link rel="preconnect" href="https://fonts.gstatic.com" />
+                    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,300;0,400;0,500;0,600;0,700;1,100&family=Poppins:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet" />
                     <link
                         href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
                         rel="stylesheet"
