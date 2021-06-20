@@ -4,7 +4,7 @@ module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
-  assetPrefix: isProd ? '/JulianWeb/' : '',
+  assetPrefix: isProd ? '' : '',
   future: {
     webpack5: true,
   },
