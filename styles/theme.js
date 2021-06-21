@@ -30,6 +30,9 @@ const theme = createMuiTheme({
         green: {
             default: '#B3C53A',
         },
+        blueMarine: '#83CBC9',
+        yellow: '#F5DB50',
+        orange: '#E8A13A'
     },
     typography: {
       fontFamily: [

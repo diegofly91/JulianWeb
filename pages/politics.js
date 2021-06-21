@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
           width: 100,
           height: 15,
           zIndex: -1,
-          background: '#F5DB50'
+          background: theme.palette.yellow
         },
     },
     text:{
