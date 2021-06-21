@@ -1,9 +1,11 @@
 import React from 'react';
+import ContainerFull from '@/components/ContainerFull';
+import Friends from '@/section/Contact/Friends';
 
 export default function Contact() {
   return (
-    <div >
-       <p>Contacto</p>
-    </div>
+    <ContainerFull >
+       <Friends />
+    </ContainerFull>
   )
 }
