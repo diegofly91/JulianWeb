@@ -46,12 +46,15 @@ const theme = createMuiTheme({
         MuiCssBaseline: {
           '@global': {
             '@font-face': [guthen],
+            a: {
+              '&:hover': {
+                color: '#FFFFFF'
+              },
+              '&:focus': {
+                color: '#FFFFFF'
+              }
+            },
           },
-        },
-        a: {
-          '&:hover': {
-            color: '#FFFFFF'
-          }
         },
     },
 });

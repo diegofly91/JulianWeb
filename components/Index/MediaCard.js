@@ -30,7 +30,7 @@ export default function MediaCard() {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image=""
+          image="https://via.placeholder.com/210x250"
           title="Contemplative Reptile"
         />
         <CardContent className={classes.footer}>

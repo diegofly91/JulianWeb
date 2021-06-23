@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Grid, Typography, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import ContainerPage  from '@/components/Container';
@@ -6,6 +6,7 @@ import Btn from '@/components/Globals/Btn';
 import Title from '@/components/Globals/Title';
 import ImageList from '@/components/Globals/ImageList';
 import Paragrapho from '@/components/Globals/Paragrapho';
+import { ListSocial } from '@/constants/social';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -32,6 +33,17 @@ const useStyles = makeStyles((theme) => ({
 
 const MoreInstagram = () => {
     const classes = useStyles();
+    const [link, useLink] = useState(null);
+
+    useEffect(() => {
+        if(!link){
+            ListSocial.map((item)=>{
+                if(item.title == 'Instagram'){
+                    useLink(item.path)
+                }
+            })
+        }
+    }, [])
     return <ContainerPage>
                     <Grid container
                         direction="row"
@@ -52,7 +64,7 @@ const MoreInstagram = () => {
                             <Paragrapho>
                                Te espero en instagram para estar comunicados todos los días.
                             </Paragrapho>
-                            <Btn href={'/'} title={'INSTAGRAM'} />
+                            <Btn href={link} title={'INSTAGRAM'} />
                         </Grid>
                         <Grid item xs={12} sm={6} md={6}>
                             <ImageList />

@@ -1,9 +1,10 @@
-import React from 'react';
+import React , { useState, useEffect } from 'react';
 import { Grid, Typography, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import ContainerPage  from '@/components/Container';
 import Btn from '@/components/Globals/Btn';
 import Title from '@/components/Globals/Title';
+import { ListSocial } from '@/constants/social';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -41,6 +42,17 @@ const useStyles = makeStyles((theme) => ({
 
 const Top = () => {
     const classes = useStyles();
+    const [link, useLink] = useState(null);
+
+    useEffect(() => {
+        if(!link){
+            ListSocial.map((item)=>{
+                if(item.title == 'LinkeInd'){
+                    useLink(item.path)
+                }
+            })
+        }
+    }, [])
     return <ContainerPage>
                     <Grid container
                         direction="row"
@@ -64,7 +76,7 @@ const Top = () => {
                             <Typography className={classes.text}>
                                 Méaestrando Gestión Pública y Doctorando Salud Pública.
                             </Typography>
-                            <Btn href={'/'} title={'MIRA MI CV'}/>
+                            <Btn href={link} title={'MIRA MI CV'}/>
                             
                         </Grid>
                 </Grid>
