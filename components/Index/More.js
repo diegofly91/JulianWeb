@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Typography, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import MediaCrad from './MediaCard';
+import MediaCard from './MediaCard';
 import ContainerFull from '@/components/ContainerFull';
 import ContainerPage  from '@/components/Container';
 
@@ -50,16 +50,16 @@ const More = () => {
                             </Typography>    
                         </Grid>
                         <Grid item xs={6} sm={4} md={3}>
-                            <MediaCrad />
+                            <MediaCard />
                         </Grid> 
                         <Grid item xs={6} sm={4} md={3}>
-                            <MediaCrad />
+                            <MediaCard />
                         </Grid>
                         <Grid item xs={6} sm={4} md={3}>
-                            <MediaCrad />
+                            <MediaCard />
                         </Grid>
                         <Grid item xs={6} sm={4} md={3}>
-                            <MediaCrad />
+                            <MediaCard />
                         </Grid>
                 </Grid>
             </ContainerPage>    

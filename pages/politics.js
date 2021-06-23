@@ -3,8 +3,14 @@ import ContainerPage from '@/components/Container';
 import { Typography, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Title from '@/components/Globals/Title';
+import Carrousel from '@/components/Carrousel/Carrousel';
 
 const useStyles = makeStyles((theme) => ({
+    containerXs:{
+      [theme.breakpoints.down('sm')]: {
+          flexDirection: 'column-reverse'
+      },
+    },
     title: {
         "&:before": {
           position: "absolute",
@@ -20,8 +26,7 @@ const useStyles = makeStyles((theme) => ({
     text:{
       fonfFamily: 'Poppins',
       fontWeight: 500,
-      fontSize: 14,
-      maxWidth: 400
+      fontSize: 15
     }
 }))
 
@@ -34,17 +39,28 @@ export default function Politics() {
           container
           direction="row"
           justify="center"
-          alignItems="center"
+          alignItems="flex-start"
+          spacing={3}
+          className={classes.containerXs}
         >
-            <Grid item xs={12} md={5}>
-
+            <Grid 
+              item 
+              container
+              xs={12} 
+              md={5}
+              direction="row"
+              justify="center"
+              alignItems="center"
+            >
+                 <Carrousel />
             </Grid>
             <Grid 
               item 
               xs={12} 
-              md={6}
+              md={7}
             >
                 <Title  title='Políticas Públicas' className={classes.title}/>
+                <br/>
                 <Typography component="p"  className={classes.text}>
                         La política y su conexión con la población, <br/>
                         siempre ha sido uno de mis intereses.

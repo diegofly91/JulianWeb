@@ -15,8 +15,10 @@ const carouselStyle = {
     paddingVertical: 0
   },
   marginAuto: {
-    marginLeft: "auto !important",
-    marginRight: "auto !important"
+    margin: "auto !important",
+    marginRight: "auto !important",
+    maxWidth: '400px',
+    width: '100%'
   }
 };
 
